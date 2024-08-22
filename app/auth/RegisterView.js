@@ -1,4 +1,4 @@
-import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, Image, TextInput, TouchableOpacity, ScrollView } from "react-native";
 import React, { useState } from "react";
 import { logo } from "../../assets/images/ImageExport";
 import GlobalStyles from "../../assets/styles/GlobalStyles";
@@ -37,7 +37,7 @@ export const RegisterView = ({ navigation }) => {
     }
 
     return (
-        <View style={[GlobalStyles.container, { flex: 1 }]}>
+        <View style={GlobalStyles.container}>
             <View style={GlobalStyles.navbarAuth}>
                 <Image source={logo} style={GlobalStyles.logoAuth} />
                 <Text style={GlobalStyles.titleAuth}>Registrarse</Text>
@@ -108,7 +108,7 @@ export const RegisterView = ({ navigation }) => {
                                 textDecorationLine: "underline",
                             }}
                         >
-                            Registrate aquí
+                            Inicia aquí
                         </Text>
                     </TouchableOpacity>
                 </View>
@@ -116,7 +116,7 @@ export const RegisterView = ({ navigation }) => {
                     style={GlobalStyles.buttonAuth}
                     onPress={handleRegister}
                 >
-                    <Text style={GlobalStyles.submitAuth}>Iniciar Sesión</Text>
+                    <Text style={GlobalStyles.submitAuth}>Registrarse</Text>
                 </TouchableOpacity>
             </View>
         </View>

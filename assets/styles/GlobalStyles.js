@@ -12,6 +12,7 @@ const GlobalStyles = StyleSheet.create({
         marginBottom: 20,
     },
     logoAuth: {
+        marginTop: 30,
         width: 150,
         height: 150,
         resizeMode: 'contain',
@@ -46,9 +47,9 @@ const GlobalStyles = StyleSheet.create({
     submitAuthContainer: {
         marginTop: 'auto',
         paddingHorizontal: 10,
-        gap: 4,
+        gap: 8,
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     buttonAuth: {
         backgroundColor: '#003A9C',

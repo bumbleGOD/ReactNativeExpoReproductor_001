@@ -1,4 +1,4 @@
-import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, Image, TextInput, TouchableOpacity, ScrollView } from "react-native";
 import React, { useState } from "react";
 import GlobalStyles from "../../assets/styles/GlobalStyles";
 import { logo } from "../../assets/images/ImageExport";
@@ -9,28 +9,33 @@ export const LoginView = ({ navigation }) => {
     const [password, setPassword] = useState("");
 
     async function handleLogin() {
+        if (!email || !password) {
+            window.alert('Todos los campos son obligatorios');
+            return;
+        }
+
         try {
             const storedData = await AsyncStorage.getItem("userData");
 
-        if (storedData !== null) {
-            const storedDataArray = JSON.parse(storedData);
-            const userFound = storedDataArray.some(
-                (user) => user.email && user.password
-            );
+            if (storedData !== null) {
+                const storedDataArray = JSON.parse(storedData);
+                const userFound = storedDataArray.some(
+                    (user) => user.email === email && user.password === password
+                );
 
-            if (userFound) {
-                navigation.navigate("IndexView");
-            } else {
-                window.alert("Las credenciales son incorrectas");
+                if (userFound) {
+                    navigation.navigate("IndexView");
+                } else {
+                    window.alert("Las credenciales son incorrectas");
+                }
             }
-        }
         } catch (error) {
             throw new Error('error');
         }
     }
 
     return (
-        <View style={[GlobalStyles.container, { flex: 1 }]}>
+        <View style={GlobalStyles.container}>
             <View style={GlobalStyles.navbarAuth}>
                 <Image source={logo} style={GlobalStyles.logoAuth} />
                 <Text style={GlobalStyles.titleAuth}>Iniciar Sesión</Text>
