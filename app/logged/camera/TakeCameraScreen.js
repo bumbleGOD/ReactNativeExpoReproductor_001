@@ -101,6 +101,7 @@ export default function TakeCameraScreen() {
                             justifyContent: "space-around",
                             paddingHorizontal: 5,
                             gap: 20,
+                      
                         }}
                     >
                         <Pressable
@@ -137,10 +138,13 @@ export default function TakeCameraScreen() {
                                         : Camera.Constants.FlashMode.off
                                 )
                             }
-                            color={
-                                flash === Camera.Constants.FlashMode.off
-                                    ? "gray"
-                                    : "#fff"
+                            // color={
+                            // }
+                            backgroundColor={
+                              flash === Camera.Constants.FlashMode.off
+                                  ? "#003A9C"
+                                  : "#00102b"
+                              
                             }
                         >
                             <Entypo name="flash" size={24} color="white" />
@@ -196,6 +200,6 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         position: 'relative',
-        bottom: '50%',
+        bottom: '10%',
     },
 });
