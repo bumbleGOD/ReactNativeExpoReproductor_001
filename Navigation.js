@@ -34,7 +34,7 @@ function MyStack() {
             <Stack.Screen
                 name="ProfileView"
                 component={ProfileView}
-                options={{ headerShown: false }}
+                options={{ headerTitle : 'Perfil', headerTitleAlign : 'center', headerTintColor: 'white', headerStyle: {backgroundColor: '#003A9C'}  }}
             />
             <Stack.Screen
                 name="CameraGallery"

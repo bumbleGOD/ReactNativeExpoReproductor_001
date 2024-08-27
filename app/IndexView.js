@@ -8,10 +8,6 @@ import Entypo from '@expo/vector-icons/Entypo';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
-// componentes
-import ProfileView from './logged/profile/ProfileView'
-import { render } from 'react-native-web'
-
 const { width } = Dimensions.get('window');
 
 const DATA = [

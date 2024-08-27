@@ -62,7 +62,20 @@ const GlobalStyles = StyleSheet.create({
     submitAuth: {
         color: 'white',
         fontFamily: 'sans-serif',
-    }
+    },
+    navbar: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingHorizontal: 10,
+        paddingVertical: 0,
+    },
+    bodyTop: {
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        paddingTop: 20,
+    },
 });
 
 export default GlobalStyles
