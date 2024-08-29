@@ -10,6 +10,7 @@ import IndexView from "./app/IndexView";
 import ProfileView from "./app/logged/profile/ProfileView";
 import TakeCameraScreen from "./app/logged/camera/TakeCameraScreen";
 import CameraGallery from "./app/logged/camera/CameraGallery";
+import VideoGallery from "./app/logged/camera/VideoGallery";
 
 const Stack = createNativeStackNavigator();
 
@@ -39,12 +40,17 @@ function MyStack() {
             <Stack.Screen
                 name="CameraGallery"
                 component={CameraGallery}
-                options={{ headerTitle : 'Cámara', headerTitleAlign : 'center', headerTintColor: 'white', headerStyle: {backgroundColor: '#003A9C'} }}
+                options={{ headerTitle : 'Fotos', headerTitleAlign : 'center', headerTintColor: 'white', headerStyle: {backgroundColor: '#003A9C'} }}
             />
             <Stack.Screen
                 name="TakeCameraScreen"
                 component={TakeCameraScreen}
                 options={{ headerTitle : 'Cámara', headerTitleAlign : 'center', headerTintColor: 'white', headerStyle: {backgroundColor: '#003A9C'} }}
+            />
+            <Stack.Screen
+                name="VideoGallery"
+                component={VideoGallery}
+                options={{ headerTitle : 'Videos', headerTitleAlign : 'center', headerTintColor: 'white', headerStyle: {backgroundColor: '#003A9C'} }}
             />
         </Stack.Navigator>
     );

@@ -12,7 +12,7 @@ const { width } = Dimensions.get('window');
 
 const DATA = [
   { id: 1, title: 'Perfil', screen: 'ProfileView', icon: <FontAwesome name="user" size={29} /> },
-  { id: 2, title: 'Videos', screen: '', icon: <Entypo name="video" size={29} /> },
+  { id: 2, title: 'Videos', screen: 'VideoGallery', icon: <Entypo name="video" size={29} /> },
   { id: 3, title: 'Fotos', screen: 'CameraGallery', icon: <AntDesign name="camera" size={29} /> },
   { id: 4, title: 'Audios', screen: '', icon: <MaterialIcons name="audio-file" size={29} /> },
 ]
